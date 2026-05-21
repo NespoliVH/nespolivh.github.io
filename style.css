@@ -55,80 +55,164 @@ body{
     transform: translateY(-10px);
 }
 
-/* FUNDO CAMPO */
+/* =========================
+   PÁGINA ESCALAÇÃO
+========================= */
+
 .escalacao{
     min-height: 100vh;
-    padding: 80px 0;
+    padding: 60px 20px;
+
     background:
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url("https://images.unsplash.com/photo-1486286701208-1d58e9338013?q=80&w=1600&auto=format&fit=crop");
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1486286701208-1d58e9338013?q=80&w=1600&auto=format&fit=crop');
 
     background-size: cover;
     background-position: center;
 }
 
-/* TITULO */
+/* TÍTULO */
 .titulo-esc{
+    text-align: center;
     font-size: 60px;
     font-weight: bold;
-    margin-bottom: 50px;
+    color: white;
+    margin-bottom: 60px;
+}
+
+/* CAMPO */
+.campo{
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* LINHAS */
-.linha-time{
+.linha{
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 70px;
+}
+
+/* GOLEIRO */
+.goleiro{
+    margin-bottom: 90px;
+}
+
+/* ZAGA */
+.zaga{
+    justify-content: space-around;
+}
+
+/* MEIO */
+.meio{
+    justify-content: space-evenly;
+}
+
+/* ATAQUE */
+.ataque{
+    justify-content: space-between;
 }
 
 /* CARD */
-.card-jogador{
-    width: 180px;
-    background: rgba(255,255,255,0.95);
-    border-radius: 20px;
+.jogador{
+    width: 230px;
+    background: rgba(255,255,255,0.96);
+    border-radius: 22px;
     overflow: hidden;
-    text-align: center;
     transition: 0.3s;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-.card-jogador:hover{
+.jogador:hover{
     transform: translateY(-10px);
 }
 
 /* FOTO */
-.card-jogador img{
+.jogador img{
     width: 100%;
-    height: 180px;
+    height: 270px;
     object-fit: cover;
 }
 
+/* CONTEÚDO */
+.info{
+    padding: 20px;
+}
+
 /* NOME */
-.card-jogador h3{
-    margin-top: 15px;
-    font-size: 22px;
+.info h3{
+    font-size: 24px;
     font-weight: bold;
     color: #111;
+    margin-bottom: 5px;
 }
 
 /* POSIÇÃO */
-.card-jogador p{
+.info span{
     color: #009c3b;
     font-weight: bold;
-    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* COMENTÁRIO */
+.info p{
+    margin-top: 15px;
+    color: #555;
+    font-size: 15px;
+    line-height: 22px;
 }
 
 /* RESPONSIVO */
-@media(max-width: 768px){
+@media(max-width: 1100px){
 
-    .card-jogador{
-        width: 150px;
+    .linha{
+        flex-wrap: wrap;
+        gap: 30px;
     }
+
+    .jogador{
+        width: 180px;
+    }
+
+    .jogador img{
+        height: 220px;
+    }
+
+}
+
+@media(max-width: 768px){
 
     .titulo-esc{
         font-size: 40px;
     }
 
+    .jogador{
+        width: 160px;
+    }
+
+    .jogador img{
+        height: 180px;
+    }
+
+}
+
+.btn-inicio{
+    background: #ffd700;
+    color: #041c3c;
+    font-weight: bold;
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(255,215,0,0.4);
+}
+
+.btn-inicio:hover{
+    background: #ffcc00;
+    transform: translateY(-4px);
+    color: #041c3c;
+    box-shadow: 0 8px 20px rgba(255,215,0,0.6);
 }
